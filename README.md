@@ -28,7 +28,7 @@ Set up secret [Ghost](https://ghost.org/) blog on the [Tor network](https://www.
 1. Run the ansible command
 
    ```bash
-   $ # Notice the trailing comma, that is not a typo
+   # Notice the trailing comma, that is not a typo
    $ ansible-playbook provision.yml -i <your_ip_here>,
    ```
 
