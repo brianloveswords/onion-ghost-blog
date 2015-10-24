@@ -25,3 +25,4 @@ $ ansible-playbook provision.yml -i <your_ip_here>,
 ```
 
 5. 👻 The last line of the ansible output will have your Onion hostname. 👻
+![screenshot](https://cldup.com/_pegX68UuB.png)
