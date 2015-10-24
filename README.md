@@ -22,6 +22,10 @@ This is based on a the [I Will Follow You into The Dark[net] presentation](https
 1. Use [Digital Ocean](https://cloud.digitalocean.com/droplets/new) to spin up a new server pre-imaged with Ghost
    ![screenshot](https://cldup.com/cP-Ph2Xhh4.png)
 
+   Make sure to associate your SSH key with it (my computer is called "Unicron")
+   ![screenshot](https://cldup.com/BwnHWayr5y.png)
+
+
 1. Figure out the server IP address. You can get it from the [droplet list page](https://cloud.digitalocean.com/droplets)
    ![screenshot](https://cldup.com/72AYhOBzsz.png)
 
