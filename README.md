@@ -6,7 +6,7 @@ Set up secret [Ghost](https://ghost.org/) blog on the [Tor network](https://www.
 
 This uses ansible (a piece of software specifically for provisioning servers) to configure a Digital Ocean Ghost image for use on the Tor network.
 
-This is based on a the [I Will Follow You into The Dark[net] presentation](http://fu.io/followdarknet) given at [Radical Networks 2015](http://radicalnetworks.org/) by [@carolinesinders](http://twitter.com/@carolinesinders), [@corcra](http://twitter.com/@corcra), and [@huertanix](http://twitter.com/@huertanix).
+This is based on a the [I Will Follow You into The Dark[net] presentation](https://docs.google.com/presentation/d/1A-0bggHr8fk0_UJhm251-GfyYShU0II3KNRDt9-uzjU) given at [Radical Networks 2015](http://radicalnetworks.org/) by [@carolinesinders](http://twitter.com/@carolinesinders), [@corcra](http://twitter.com/@corcra), and [@huertanix](http://twitter.com/@huertanix).
 
 ## Usage
 
