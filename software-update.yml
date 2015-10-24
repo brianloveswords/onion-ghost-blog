@@ -1,0 +1,6 @@
+- hosts: all
+  user: root
+  gather_facts: no
+  tasks:
+    - name: upgrade system packages
+      apt: update_cache=yes upgrade=yes

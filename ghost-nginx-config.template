@@ -1,0 +1,18 @@
+server {
+    listen 127.0.0.1:80 default_server;
+
+    server_name {{onion_hostname.stdout}};
+
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+
+    client_max_body_size 10G;
+
+    location / {
+        proxy_pass http://localhost:2368;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+    } 
+}

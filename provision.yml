@@ -1,0 +1,76 @@
+- hosts: all
+  user: root
+  gather_facts: no
+  tasks:
+    - name: gpg key downloaded
+      command: gpg --keyserver keys.gnupg.net --recv 886DDD89
+
+    - name: gpg key added
+      shell: gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+
+    - name: tor repo exists
+      apt_repository:
+        repo='deb http://deb.torproject.org/torproject.org trusty main'
+        state=present
+
+    - name: tor source repo exists
+      apt_repository:
+        repo='deb-src http://deb.torproject.org/torproject.org trusty main'
+        state=present
+
+    - name: update apt cache
+      apt: cache_valid_time=600 update_cache=yes
+
+    - name: tor is present
+      apt: pkg="tor" state=present
+
+    - name: deb.torproject.org-keyring is present
+      apt: pkg="deb.torproject.org-keyring" state=present
+
+    - name: exim is not present
+      apt: pkg=exim state=absent
+
+    - name: postfix is not present
+      apt: pkg=postfix state=absent
+
+    - name: sendmail is not present
+      apt: pkg=sendmail state=absent
+
+    - name: ufw is present
+      apt: pkg=ufw state=present
+
+    - name: ufw allow http
+      command: /usr/sbin/ufw allow 80/tcp
+
+    - name: ufw allow ssh
+      command: /usr/sbin/ufw allow 22/tcp
+
+    - name: ufw is enabled
+      shell: echo 'y' | ufw enable
+
+    - name: use correct tor config
+      template:
+        dest=/etc/tor/torrc
+        src=torrc.template
+
+    - name: restart tor service
+      service: name=tor state=restarted
+
+    - name: get onion hostname
+      command: /bin/cat /var/lib/tor/hidden_service/hostname
+      register: onion_hostname
+
+    - name: use correct nginx configuration
+      template:
+        dest=/etc/nginx/sites-available/ghost
+        src=ghost-nginx-config.template
+
+    - name: ghost is configured for correct hostname
+      template:
+        dest=/var/www/ghost/config.js
+        src=ghost-app-config.js.template
+
+    - name: restart nginx
+      service: name=nginx state=restarted
+
+    - debug: msg="onion hostname is {{onion_hostname.stdout}}"
