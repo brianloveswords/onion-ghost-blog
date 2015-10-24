@@ -1,4 +1,4 @@
-# onion-ghost-setup
+# onion-ghost-blog
 
 Set up secret [Ghost](https://ghost.org/) blog on the [Tor network](https://www.torproject.org/) in under a two minutes.
 
@@ -22,7 +22,7 @@ Set up secret [Ghost](https://ghost.org/) blog on the [Tor network](https://www.
 
 1. Clone this repository
    ```bash
-   $ git clone https://github.com/brianloveswords/onion-ghost-setup.git && cd onion-ghost-setup
+   $ git clone https://github.com/brianloveswords/onion-ghost-blog.git && cd onion-ghost-blog
    ```
 
 1. Run the ansible command
