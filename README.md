@@ -16,7 +16,7 @@ Set up secret [Ghost](https://ghost.org/) blog on the [Tor network](https://www.
 1. Use [Digital Ocean](https://cloud.digitalocean.com/droplets/new) to spin up a new server pre-imaged with Ghost
    ![screenshot](https://cldup.com/cP-Ph2Xhh4.png)
 
-1. Note your IP address, e.g.:
+1. Figure out the server IP address. You can get it from the [droplet list page](https://cloud.digitalocean.com/droplets)
    ![screenshot](https://cldup.com/72AYhOBzsz.png)
 
 
