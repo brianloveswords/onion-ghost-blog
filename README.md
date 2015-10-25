@@ -17,7 +17,7 @@ This is based on a the [I Will Follow You into The Dark[net] presentation](https
    $ brew install ansible
    ```
 
-   For other operating systems follow the instructions listed above.
+   For other operating systems [follow the instructions on the ansible site](https://docs.ansible.com/ansible/intro_installation.html).
 
 1. Use [Digital Ocean](https://cloud.digitalocean.com/droplets/new) to spin up a new server pre-imaged with Ghost
    ![screenshot](https://cldup.com/cP-Ph2Xhh4.png)
