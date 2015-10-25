@@ -42,5 +42,5 @@ This is based on a the [I Will Follow You into The Dark[net] presentation](https
    $ ansible-playbook provision.yml -i <your_ip_here>,
    ```
 
-1. 👻 The last line of the ansible output will have your Onion hostname. 👻
+1. 👻 The last output of the ansible run will have your Onion hostname. 👻
    ![screenshot](https://cldup.com/_pegX68UuB.png)
