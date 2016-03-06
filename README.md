@@ -1,6 +1,6 @@
 # onion-ghost-blog
 
-Set up secret [Ghost](https://ghost.org/) blog on the [Tor network](https://www.torproject.org/) in under a two minutes.
+Set up secret [Ghost](https://ghost.org/) blog on the [Tor network](https://www.torproject.org/) in under two minutes.
 
 ## What?
 
